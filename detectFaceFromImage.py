@@ -1,11 +1,16 @@
 import numpy as np
 import cv2
+import easygui
+
 
 
 
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
-img = cv2.imread('mySample2.jpg')
+
+# Opening an image from a file
+f = easygui.fileopenbox()
+img = cv2.imread(f)
 
 
 #define the screen resulation
