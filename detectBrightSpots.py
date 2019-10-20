@@ -7,10 +7,10 @@ import argparse
 import imutils
 
 
-#window_name='Eureka !!'
+window='Screen'
 # Capturing Webcam Feed
 cap = cv2.VideoCapture(0)
-#cv2.namedWindow(window_name, cv2.WINDOW_NORMAL)
+cv2.namedWindow(window, cv2.WINDOW_NORMAL)
 
 while(True):
 	ret, image = cap.read()
@@ -51,7 +51,7 @@ while(True):
 			cv2.circle(image, (int(cX), int(cY)), int(radius),(0, 0, 255), 3)
 			cv2.putText(image, "#{}".format(i + 1), (x, y - 15),cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 255), 2)
 	# show the output image
-	cv2.imshow("Image", image)
+	cv2.imshow(window, image)
 	if cv2.waitKey(1) & 0xFF == ord('q'):
 		break
 	
