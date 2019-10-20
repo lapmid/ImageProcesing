@@ -1,0 +1,1 @@
+it is a repo having some simple opencv projects
